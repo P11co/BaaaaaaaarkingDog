@@ -75,9 +75,20 @@ void solve9498() {
 
 // 기본 문제✔ 	2752 	세수정렬
 void solve2752() {
-    int a, b, c;
-    cin >> a >> b >> c; 
-    cout << min(a, b, c) << 
+    int a, b, c, d, e, f;
+    cin >> a >> b >> c;
+    // Method 1 (C++98)
+    d = min(min(a, b), min(b, c));
+    f = max(max(a, b), max(b, c));
+    // Method 2 (C++11 ~)
+    // d = min({a, b, c});
+    // f = min({a, b, c});
+    // Method 3
+    // vector<int> vect = {a, b, c}; 
+    // d = *min_element(vect.begin(), vect.end());
+    // f = *max_element(vect.begin(), vect.end());
+    e = a + b + c - d - f;
+    cout << d << " " << e << " " << f << "\n";
 }
 
 
@@ -106,6 +117,7 @@ int main() {
     // solve10869();    // 사칙연산
     // solve9498();     // 시험 성적
     solve2752();      //세수정렬
+    cout << __cplusplus << "\n";
 
     return 0;
 }
