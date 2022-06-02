@@ -150,19 +150,73 @@ void solve2576() {
 
 // 기본 문제✔ 	2587 	대표값2
 void solve2585() {
-
+    int arr[5], sum = 0;
+    for(int i=0; i<5; i++) {
+        cin >> arr[i];
+        sum += arr[i];
+    }
+    sort(arr, arr + 5);
+    cout << sum/5 << "\n";
+    cout << arr[2] << "\n";
 }
 
 
 // 기본 문제✔ 	2309 	일곱 난쟁이
 void solve2309() {
+    // input
+    int arr[9], sum = 0;
+    for(int i=0; i<9; i++) {
+        cin >> arr[i];
+        sum += arr[i];
+    }
 
+    // bonus height (height of the 2 dwarfs we want to exclude) = sum (heights of all 9 dwarfs) - 100 (height of 7 dwarfs))
+    // 보너스 키는 모든 키의 합에서 100을 뺀 나머지이다
+    sum -= 100;
+    sort(arr, arr + 9);
+    bool flag = true;
+    int idx[2];
+    
+    /* algorithm:
+        find the 2 dwarfs that sum up to the bonus height by adding 2 heights that add up to that bonus height (brute-forcing)
+        브루트포스 알고리즘으로 2명의 합이 보너스 키와 같다면 그 2명(i 와j)만 빼고 출력을 하면 된다 */
+    for(int j=0; j<9; j++) {
+        for(int k=j+1; k<9; k++) {
+            if(arr[j] + arr[k] == sum) {
+                idx[0] = j;
+                idx[1] = k;
+                flag = false;
+                break;
+            }
+        }
+        if(flag == false) {
+            break;
+        }
+    }
+    // output
+    for(int z=0; z<9; z++) {
+        if(z != idx[0] and z != idx[1]) cout << arr[z] << "\n";
+    }
 }
 
 
 // 기본 문제✔ 	10093 	숫자
 void solve10093() {
+    // input
+    long long int x, y, a, z;
+    cin >> x >> y;
 
+    // ensure a -> z is increasing
+    a = min(x, y);
+    z = max(x, y);
+
+    // output - number of integers in between a and z
+    if(a == z) cout << 0 << "\n";
+    else cout << z - (a + 1) << "\n";
+    // output - the actual integers in between a and z
+    for(long long int i = a + 1; i < z; i++) {
+        cout << i << " ";
+    }
 }
 
 
@@ -186,7 +240,12 @@ void solve15552() {
 
 // 기본 문제✔ 	2438 	별 찍기 - 1
 void solve2438() {
-
+  int n;
+  cin >> n;
+  for(int i = 1; i < n + 1; i++) {
+    for(int j = 0; j < i; j++) cout << "*";
+    cout << "\n";
+  }
 }
 
 
@@ -258,10 +317,10 @@ int main() {
     // solve2753();        // 윤년
     // solve2480();        // 주사위 세개
     // solve2490();        // 윷놀이
-    solve2576();        // 홀수
-    solve2585();        // 대표값2
-    solve2309();        // 일곱 난쟁이
-    solve10093();       // 숫자
+    // solve2576();        // 홀수
+    // solve2585();        // 대표값2
+    // solve2309();        // 일곱 난쟁이
+    // solve10093();       // 숫자
     solve1267();        // 핸드폰 요금
     solve10804();       // 카드 역배치
     solve15552();       // 빠른 A+B

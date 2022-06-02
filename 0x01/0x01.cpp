@@ -1,3 +1,4 @@
+// 유투브 영상 수업에서 나온 문제들 풀이 입니다
 #include <iostream>
 #include <cmath>
 
