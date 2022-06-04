@@ -240,30 +240,43 @@ void solve15552() {
 
 // 기본 문제✔ 	2438 	별 찍기 - 1
 void solve2438() {
-  int n;
-  cin >> n;
-  for(int i = 1; i < n + 1; i++) {
-    for(int j = 0; j < i; j++) cout << "*";
-    cout << "\n";
-  }
+    int n;
+    cin >> n;
+    for(int i = 1; i < n + 1; i++) {
+        for(int j = 0; j < i; j++) cout << "*";
+        cout << "\n";
+    }
 }
 
 
 // 기본 문제✔ 	2439 	별 찍기 - 2
 void solve2439() {
-
+    int n;
+    cin >> n;
+    for(int i=1; i<n+1; i++) {
+        for(int j=0; j<n; j++) {
+        if(n - j > i) cout << " ";
+        else cout << "*";
+        }
+        cout << "\n";
+    }
 }
 
 
 // 기본 문제✔ 	2440 	별 찍기 - 3
 void solve2440() {
-
+    int n;
+    cin >> n;
+    for(int i=n; i>0; i--) {
+        for(int j=0; j<i; j++) cout << "*";
+        cout << "\n";
+    }
 }
 
 
 // 기본 문제✔ 	2441 	별 찍기 - 4
 void solve2441() {
-
+    
 }
 
 
@@ -324,9 +337,9 @@ int main() {
     solve1267();        // 핸드폰 요금
     solve10804();       // 카드 역배치
     solve15552();       // 빠른 A+B
-    solve2438();        // 별 찍기 - 1
-    solve2439();        // 별 찍기 - 2
-    solve2440();        // 별 찍기 - 3
+    // solve2438();        // 별 찍기 - 1
+    // solve2439();        // 별 찍기 - 2
+    // solve2440();        // 별 찍기 - 3
     solve2441();        // 별 찍기 - 4
     solve2442();        // 별 찍기 - 5
     solve2443();        // 별 찍기 - 6
