@@ -222,19 +222,63 @@ void solve10093() {
 
 // 기본 문제✔ 	1267 	핸드폰 요금
 void solve1267() {
-
+    int num;
+    cin >> num;
+    int arr[num];
+    double yongsik = 0, minsik = 0;
+    for(int i=0; i<num; i++) {
+        cin >> arr[i];
+        if (arr[i] % 30 >= 0 and arr[i] != 0) yongsik += (arr[i] / 30 + 1) * 10;
+        else yongsik += (arr[i] / 30) * 10;
+        if (arr[i] % 60 >= 0 and arr[i] != 0) minsik += (arr[i] / 60 + 1) * 15;
+        else minsik += (arr[i] / 60) * 15;
+    }
+    if (yongsik == minsik) cout << "Y M " << yongsik;
+    else if(yongsik > minsik) cout << "M " << minsik;
+    else cout << "Y " << yongsik;
 }
 
 
 // 기본 문제✔ 	10804 	카드 역배치
 void solve10804() {
-
+    // define arr
+    int arr[20];
+    for(int i=0; i<20; i++) {
+        arr[i] = i + 1;
+    }
+    // input
+    int ipt[10][2];
+    for(int i=0; i<10; i++) {
+        cin >> ipt[i][0];
+        cin >> ipt[i][1];
+    }
+    // algorithm
+    // for(int cmd=0; cmd<10; cmd++) {
+    //     for(int i=ipt[cmd][0], j=ipt[cmd][1]; i<int((ipt[cmd][1]-ipt[cmd][0]+1)/2); i++, j--) {
+    //         swap(arr[i-1], arr[j-1]);
+    //     }
+    // }
+    for(int cmd=0; cmd<10; cmd++) {
+        int a = ipt[cmd][0];
+        int b = ipt[cmd][1];
+        for(int i=0; i<(b-a+1)/2; i++) {
+            swap(arr[a+i-1], arr[b-i-1]);
+        }
+    }
+    // output
+    for(int i=0; i<20; i++) cout << arr[i] << " ";
 }
 
 
 // 기본 문제✔ 	15552 	빠른 A+B
 void solve15552() {
-
+    int trials;
+    cin >> trials;
+    for(int i=0; i<trials; i++) {
+        int a, b;
+        cin >> a >> b;
+        cout << a + b << "\n";
+    }
 }
 
 
@@ -276,43 +320,106 @@ void solve2440() {
 
 // 기본 문제✔ 	2441 	별 찍기 - 4
 void solve2441() {
-    
+    int n;
+    cin >> n;
+    for(int i=0; i<n; i++) {
+        int j;
+        for(j = 0; j<i; j++) cout << " ";
+        for(j = i; j<n; j++) cout << "*";
+        cout << "\n";
+    }
 }
 
 
 // 기본 문제✔ 	2442 	별 찍기 - 5
 void solve2442() {
-
+    int n;
+    cin >> n;
+    for(int i=1; i<n+1; i++) {
+        for(int j=0; j<(n-i); j++) cout << " ";
+        for(int j=0; j<(i*2-1); j++) cout << "*";
+        cout << "\n";
+    }
 }
 
 
 // 기본 문제✔ 	2443 	별 찍기 - 6
 void solve2443() {
-
+    int n;
+    cin >> n;
+    for(int i=n; i>0; i--) {
+        for(int j=0; j<n-i; j++) cout << " ";
+        for(int j=0; j<2*i-1; j++) cout << "*";
+        cout << "\n";
+    }
 }
 
 
 // 기본 문제✔ 	2444 	별 찍기 - 7
 void solve2444() {
-
+    int n;
+    cin >> n;
+    for(int i=1; i<n+1; i++) {
+        for(int j=0; j<n-i; j++) cout << " ";
+        for(int j=0; j<i*2-1; j++) cout << "*";
+        cout << "\n";
+    }
+    for(int i=n-1; i>0; i--) {
+        for(int j=0; j<n-i; j++) cout << " ";
+        for(int j=0; j<i*2-1; j++) cout << "*";
+        cout << "\n";
+    }
 }
 
 
 // 기본 문제✔ 	2445 	별 찍기 - 8
 void solve2445() {
-
+    int n;
+    cin >> n;
+    for(int i=n-1; i>=0; i--) {
+        for(int j=i; j<n; j++) cout << "*";
+        for(int j=0; j<i*2; j++) cout << " ";
+        for(int j=i; j<n; j++) cout << "*";
+        cout << "\n";
+    }
+    for(int i=1; i<n; i++) {
+        for(int j=i; j<n; j++) cout << "*";
+        for(int j=0; j<i*2; j++) cout << " ";
+        for(int j=i; j<n; j++) cout << "*";    
+        cout << "\n";
+    }
 }
 
 
 // 기본 문제✔ 	2446 	별 찍기 - 9
 void solve2446() {
-
+    int n;
+    cin >> n;
+    for(int i=0; i<n-1; i++) {
+        for(int j=0; j<i; j++) cout << " ";
+        for(int j=0; j<(n-i)*2-1; j++) cout << "*";
+        cout << "\n";
+    }
+    for(int i=n-1; i>=0; i--) {
+        for(int j=0; j<i; j++) cout << " ";
+        for(int j=0; j<(n-i)*2-1; j++) cout << "*";
+        cout << "\n";
+    }
 }
 
 
 // 기본 문제✔ 	2562 	최댓값
 void solve2562() {
-
+    int arr[9], max, idx;
+    max = 0;
+    for(int i=0; i<9; i++) {
+        cin >> arr[i];
+        if(arr[i] > max) {
+            max = arr[i];
+            idx = i;
+        }
+    }
+    cout << max << "\n" << idx + 1;
 }
 
 
@@ -334,19 +441,19 @@ int main() {
     // solve2585();        // 대표값2
     // solve2309();        // 일곱 난쟁이
     // solve10093();       // 숫자
-    solve1267();        // 핸드폰 요금
+    // solve1267();        // 핸드폰 요금
     solve10804();       // 카드 역배치
-    solve15552();       // 빠른 A+B
+    // solve15552();       // 빠른 A+B
     // solve2438();        // 별 찍기 - 1
     // solve2439();        // 별 찍기 - 2
     // solve2440();        // 별 찍기 - 3
-    solve2441();        // 별 찍기 - 4
-    solve2442();        // 별 찍기 - 5
-    solve2443();        // 별 찍기 - 6
-    solve2444();        // 별 찍기 - 7
-    solve2445();        // 별 찍기 - 8
-    solve2446();        // 별 찍기 - 9
-    solve2562();        // 최댓값
+    // solve2441();        // 별 찍기 - 4
+    // solve2442();        // 별 찍기 - 5
+    // solve2443();        // 별 찍기 - 6
+    // solve2444();        // 별 찍기 - 7
+    // solve2445();        // 별 찍기 - 8
+    // solve2446();        // 별 찍기 - 9
+    // solve2562();        // 최댓값
 
     // cout << __cplusplus << "\n";
 
