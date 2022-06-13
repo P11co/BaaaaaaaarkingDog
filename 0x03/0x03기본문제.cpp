@@ -73,6 +73,19 @@ int solve3273() {
 
 
 // 기본 문제	10807	개수 세기
+int solve10807() {
+    // input
+    int n, v;
+    cin >> n;
+    int arr[n];
+    for(int i=0; i<n; i++) cin >> arr[i];
+    cin >> v;
+
+    // algorithm
+    int sum = 0;
+    for(int ele: arr) if(ele == v) sum++;
+    cout << sum;
+}
 // 기본 문제	13300	방 배정
 // 기본 문제	11328	Strfry
 // 기본 문제	1919	애너그램 만들기
