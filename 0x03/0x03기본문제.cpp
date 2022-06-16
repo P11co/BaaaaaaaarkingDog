@@ -1,7 +1,5 @@
 #include <bits/stdc++.h>
 #include <iostream>
-// #include <sstream>
-// #include <string>
 using namespace std;
 
 // 기본 문제✔	2577	숫자의 개수
@@ -86,9 +84,75 @@ int solve10807() {
     for(int ele: arr) if(ele == v) sum++;
     cout << sum;
 }
+
+
 // 기본 문제	13300	방 배정
+void solve13300() {
+    int n, room_size, rooms = 0;
+    cin >> n >> room_size;
+    int arr[7][2];
+    for(int i=0; i<7; i++) {
+      for(int j=0; j<2; j++) {
+        arr[i][j] = 0;
+      }
+    }
+    for(int i=0; i<n; i++) {
+      int gender, grade;
+      cin >> gender;
+      cin >> grade;
+      arr[grade][gender]++;
+    }
+    for(int i=1; i<7; i++) {
+      // cout << i << " grade " << "girl: " << arr[i][0] << ", ";
+      // cout << i << " grade " << "boy: " << arr[i][1] << "\n";
+      for(int j=0; j<2; j++) {
+        rooms += (arr[i][j] + room_size - 1) / room_size;
+      }
+    }
+    cout << rooms;
+}
+
+
 // 기본 문제	11328	Strfry
+void solve11328() {
+  // input
+  int N;
+  cin >> N;
+  for(int i=0; i<N; i++) {
+    string str1, str2;
+    cin >> str1 >> str2;
+    
+    // memoize the alphabet count of str1 and str2
+    int arr[26] = {0};
+    for(auto chr: str1) arr[chr - 'a']++;
+    for(auto chr: str2) arr[chr - 'a']--;
+    
+    // if any element in arr is 0, it means str1 and str2 are not anagrams
+    bool is_possible = true;
+    for(int ele: arr) if(ele != 0) is_possible = false;
+    if(is_possible) {
+      cout << "Possible" << "\n";
+    }
+    else cout << "Impossible" << "\n";
+  }
+}
+
+
 // 기본 문제	1919	애너그램 만들기
+void solve1919() {
+    string str1, str2;
+    cin >> str1 >> str2;
+    int memo[26] = {0};
+    for(auto c: str1) memo[c - 'a']++;
+    for(auto c: str2) memo[c - 'a']--;
+
+    int sum = 0;
+    for(int ele: memo) {
+      if(ele != 0) sum += abs(ele);
+    }
+    cout << sum << "\n";
+}
+
 
 int main(void) {
     ios::sync_with_stdio(0);
@@ -96,9 +160,9 @@ int main(void) {
 
     // solve2577();        // 방 번호
     // solve1475();        // 두 수의 합
-    // solve3273();        // 
-    // solve10807();       //
-    // solve13300();       //
-    // solve11328();       //
-    // solve1919();        //
+    // solve3273();        // 두 수의 합
+    // solve10807();       // 개수 세기
+    // solve13300();       // 방 배정
+    // solve11328();       // Strfry
+    // solve1919();        // 애너그램 만들기
 }
