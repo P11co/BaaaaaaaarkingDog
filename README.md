@@ -1,8 +1,8 @@
-# encrypted_barkingdog
-This repository contains codes created in the process of learning
-Encrypted (AKA BaaaaaaaarkingDog)'s coding test preparation curriculum.
-
-Please refer to BaaaaaaaarkingDog's [blog post](https://blog.encrypted.gg/category/%EA%B0%95%EC%A2%8C/%EC%8B%A4%EC%A0%84%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98) and his [workbook catalog](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook.md).
+# encrypted-def (also known as BaaaaaaaarkingDog)
+This repository contains codes created in the process of learning BaaaaaaaarkingDog's coding test preparation curriculum.
+Big thanks to [BaaaaaaaarkingDog](https://github.com/encrypted-def) for creating the curriculum, and [sukam09](https://github.com/sukam09) for introducing me to such resources.
+Most of my codes will be written before looking at the solution (unless I had great difficulty solving said problems) - allowing alternate solutions, or similar code with different syntaxes. I tend to adopt more comprehensible variable names and list out used libraries - a bit unconventional for a speed-coder - but it can bring about good coding conventions as well as be easier to read for those who have a hard time reading code. 
+If my code ever helps anyone in their understanding, it would be my greatest honor. Good luck on your journey as well - it will be a long and rewarding one!
 
 # 문제집
 | 번호 | 주제 |
@@ -37,3 +37,5 @@ Please refer to BaaaaaaaarkingDog's [blog post](https://blog.encrypted.gg/catego
 | 0x1B | [최소 신장 트리](workbook/0x1B.md) |
 | 0x1C | [플로이드 알고리즘](workbook/0x1C.md) |
 | 0x1D | [다익스트라 알고리즘](workbook/0x1D.md) |
+
+For further information, please refer to BaaaaaaaarkingDog's [blog post](https://blog.encrypted.gg/category/%EA%B0%95%EC%A2%8C/%EC%8B%A4%EC%A0%84%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98) and his [workbook catalog](https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook.md).
