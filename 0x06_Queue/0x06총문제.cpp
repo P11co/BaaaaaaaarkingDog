@@ -11,7 +11,7 @@ Chapter 6 - https://github.com/encrypted-def/basic-algo-lecture/blob/master/work
 using namespace std;
 
 
-// 연습 문제	10845	큐
+// 연습 문제	10845	큐      &&      기본 문제✔	18258	큐 2
 void solve10845() {
   int N;
   queue<int> q;
@@ -45,21 +45,28 @@ void solve10845() {
 }
 
 
-// 기본 문제✔	18258	큐 2
-void solve18258() {
-
-}
-
-
 // 기본 문제✔	2164	카드2
 void solve2164() {
-
+  int N;
+  cin >> N;
+  queue<int> q;
+  for(int i=1; i<=N; i++) {
+    q.push(i);
+  }
+  while(q.size() > 1) {
+    q.pop();
+    q.push(q.front());
+    q.pop();
+  }
+  cout << q.front();
 }
 
 
 int main() {
-    // solve10845();           // 큐
-    solve18258();           // 큐2
-    solve2164();            // 카드2
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    
+    // solve10845();           // 큐 && 큐2
+    // solve2164();            // 카드2
     return 0;
 }
