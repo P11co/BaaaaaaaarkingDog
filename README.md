@@ -1,4 +1,5 @@
-# BaaaaaaaarkingDog's Algorithm Tutorial
+## ⚠️ 👷‍🚧👷 This site is under construction 🚧 You're welcome to visit, but watch out for open manholes! ➡️⛔🕳️⛔⬅️ ⚠️ 👷‍♀️👷‍♀️👷
+### BaaaaaaaarkingDog's Algorithm Tutorial
 Korean speed-coding and algorithms genius, [BaaaaaaaarkingDog](https://github.com/encrypted-def), writes his very own algorithm cookbook to get you up to speed with the basics and complexities of the algorithmic world! Many thanks to [sukam09](https://github.com/sukam09) for introducing me to the study guide. All credits to BaaaaaaaarkingDog for arranging the workbooks.
 
 I tend to code in a more conventional style, over speed-coding-styles. The code will be open to all for educational purposes.
