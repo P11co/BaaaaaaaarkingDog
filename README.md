@@ -1,8 +1,7 @@
-# encrypted-def (also known as BaaaaaaaarkingDog)
-This repository contains codes created in the process of learning BaaaaaaaarkingDog's coding test preparation curriculum.
-Big thanks to [BaaaaaaaarkingDog](https://github.com/encrypted-def) for creating the curriculum, and [sukam09](https://github.com/sukam09) for introducing me to such resources.
-Most of my codes will be written before looking at the solution (unless I had great difficulty solving said problems) - allowing alternate solutions, or similar code with different syntaxes. I tend to adopt more comprehensible variable names and list out used libraries - a bit unconventional for a speed-coder - but it can bring about good coding conventions as well as be easier to read for those who have a hard time reading code. 
-If my code ever helps anyone in their understanding, it would be my greatest honor. Good luck on your journey as well - it will be a long and rewarding one!
+# BaaaaaaaarkingDog's Algorithm Tutorial
+Korean speed-coding and algorithms genius, [BaaaaaaaarkingDog](https://github.com/encrypted-def), writes his very own algorithm cookbook to get you up to speed with the basics and complexities of the algorithmic world! Many thanks to [sukam09](https://github.com/sukam09) for introducing me to the study guide. All credits to BaaaaaaaarkingDog for arranging the workbooks.
+
+I tend to code in a more conventional style, over speed-coding-styles. The code will be open to all for educational purposes.
 
 # 문제집
 | 번호 | BaaaaaaaarkingDog | P11co |
